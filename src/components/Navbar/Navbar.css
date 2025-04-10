@@ -1,0 +1,119 @@
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+  
+  .navbar:hover {
+    background-color: #222;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Menu Button (Hamburger Icon) */
+  .menu-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Navbar Brand */
+  .navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .navbar-brand:hover {
+    color: #ff6347;
+  }
+  
+  /* Navbar Links */
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar-links li {
+    position: relative;
+  }
+  
+  .navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-links li a:hover {
+    color: #ff6347;
+  }
+  
+  .navbar-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6347;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-links li a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #e55347;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Sidebar */
+  @media (max-width: 900px) {
+    .navbar-links {
+      display: none;
+    }
+  
+    .menu-button {
+      display: block;
+    }
+  }
+  
